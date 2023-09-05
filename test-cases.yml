@@ -28,9 +28,9 @@
   steps:
     - Нажать кнопку "Sign Up"
     - Нажать кнопку "Sign in with GitHub"
+    - Нажать на кнопку подтверждения на странице GitHub после автоматического перехода
   expected-result: |
-    Происходит переход на страницу GitHub с запросом на подтвеждение регистрации аккаунта. После подтверждения происходит переход на страницу
-    https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
+    После подтверждения происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
 
 
 - summary: |
@@ -44,9 +44,9 @@
   steps:
     - Нажать кнопку "Sign Up"
     - Нажать кнопку "Sign in with Discord"
+    - Нажать на кнопку подтверждения на странице Discord после автоматического перехода
   expected-result: |
-    Происходит переход на страницу Discord с запросом на подтвеждение регистрации аккаунта. После подтверждения происходит переход на страницу
-    https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
+    После подтверждения происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
 
 
 - summary: |
@@ -65,8 +65,9 @@
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
 
+
 - summary: |
-    Успешная авторизация с помощью GitHub или Discord
+    Успешная авторизация с помощью GitHub
   requirement: |
     При правильном выполнении действий происходит авторизация пользователя
   prerequisites: |
@@ -75,9 +76,22 @@
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
   steps:
     - Нажать кнопку "Sign In"
-    - Ввести зарегистрированный email
-    - Ввести пароль
-    - Нажать кнопку "Submit"
+    - Нажать кнопку "Sign in with GitHub"
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
+
+
+- summary: |
+    Успешная авторизация с помощью Discord
+  requirement: |
+    При правильном выполнении действий происходит авторизация пользователя
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Sign In"
+    - Нажать кнопку "Sign in with Discord"
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
     
