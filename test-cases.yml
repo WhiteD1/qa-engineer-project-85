@@ -99,7 +99,7 @@
 - summary: |
     Успешное создание игры с ботом через авторизованного пользователя
   requirement: |
-    При правильном выполнении действий создается игра
+    При правильном выполнении действий создается игра с ботом
   prerequisites: |
     Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io/#lobby
   test-data: |
@@ -111,6 +111,42 @@
     - Установить любое количество времени игры
     - Выбрать любое задание
     - Выбрать любые теги
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/games/(номер игры), начинается отсчет времени игры.
+
+
+- summary: |
+    Успешное создание игры с ботом незарегистрированным пользователем
+  requirement: |
+    При правильном выполнении действий создается игра с ботом
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Try simple battle"
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/games/(номер игры), начинается отсчет времени игры.
+
+
+- summary: |
+    Успешное создание игры с другим пользователем
+  requirement: |
+    При правильном выполнении действий создается игра с другим пользователем
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать любой уровень
+    - Выбрать тип игры "With a friend"
+    - Установить любое количество времени игры
+    - В выпадающем меню выбрать любого пользователя
+    - Выбрать любое задание
+    - Выбрать любые теги
+    - Нажать кнопку "Create battle"
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/games/(номер игры), начинается отсчет времени игры.
     
