@@ -48,4 +48,36 @@
     Происходит переход на страницу Discord с запросом на подтвеждение регистрации аккаунта. После подтверждения происходит переход на страницу
     https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
 
+
+- summary: |
+    Успешная авторизация с помощью email
+  requirement: |
+    При правильном выполнении действий происходит авторизация пользователя
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Sign In"
+    - Ввести зарегистрированный email
+    - Ввести пароль
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
+
+- summary: |
+    Успешная авторизация с помощью GitHub или Discord
+  requirement: |
+    При правильном выполнении действий происходит авторизация пользователя
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Sign In"
+    - Ввести зарегистрированный email
+    - Ввести пароль
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
     
