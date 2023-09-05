@@ -32,4 +32,20 @@
     Происходит переход на страницу GitHub с запросом на подтвеждение регистрации аккаунта. После подтверждения происходит переход на страницу
     https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
 
+
+- summary: |
+    Успешная регистрация с помощью Discord
+  requirement: |
+    При правильном выполнении действий происходит регистрация нового пользователя с помощью аккаунта на Discord
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Sign Up"
+    - Нажать кнопку "Sign in with Discord"
+  expected-result: |
+    Происходит переход на страницу Discord с запросом на подтвеждение регистрации аккаунта. После подтверждения происходит переход на страницу
+    https://codebattle.hexlet.io/#lobby, появляется доступ в личный кабинет
+
     
