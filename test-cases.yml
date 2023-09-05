@@ -208,4 +208,56 @@
     - Нажать кнопку "Create battle"
   expected-result: |
     Появляется сообщение об ошибке, игра не начинается. 
+
+
+- summary: |
+    Успешная проверка кода в игре
+  requirement: |
+    При правильном выполнении действий игра заканчивается и объявляется победитель
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+    Верный вариант решения для победы
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => {
+    return width * length;
+    };
+    module.exports = solution;
+  steps:
+    - Нажать на кнопку "Create a game"
+    - В меню Level выбрать уровень сложности 1 звезда
+    - В меню Game type выбрать "With a bot"
+    - Установить любое время игры
+    - В выпадающем меню выбрать задачу под названием "rect_area"
+    - Нажать на кнопку "Create battle"
+    - Копируем и вставляем с заменой код из test-data 
+    - Нажимаем зелёную кнопку "check solution"
+  expected-result: |
+    Появляется сообщение о победе в игре, таймер пропал.
+
+
+- summary: |
+    Успешное отображение кода в процессе игры
+  requirement: |
+    При правильном выполнении действий пользователь видит код противника в реальном времени
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать на кнопку "Create a game" 
+    - В меню Level выбрать уровень сложности 4 звезды
+    - В меню Game type выбрать "With a bot"
+    - Установить время игры на "8 минут"
+    - Выбрать любое задание
+    - Выбрать любые теги
+    - Нажать на кнопку "Create battle"
+    - Начать набирать в окне терминала любой код
+    - Ожидать пока противник начнёт печатать код
+  expected-result: |
+    Пользователь видит код противинка в реальном времени
+
+    
     
