@@ -94,4 +94,21 @@
     - Нажать кнопку "Sign in with Discord"
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
+
+
+- summary: |
+    Успешное создание игры с ботом через авторизованного пользователя
+  requirement: |
+    При правильном выполнении действий создается игра
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать любой уровень
+    - Выбрать тип игры "With a bot"
+    - 
+  expected-result: |
+    Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
     
