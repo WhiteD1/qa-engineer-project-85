@@ -6,11 +6,14 @@
     Открыта страница сайта https://codebattle.hexlet.io/
   test-data: |
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+    Nickname = Dima
+    Email = любой новый email
+    Password = любой password
   steps:
     - Нажать кнопку "Sign Up"
-    - Ввести любое имя от 3 до 16 символов
-    - Ввести любую корректную почту
-    - Ввести любой пароль от 3 до 16 символов
+    - Ввести Nickname
+    - Ввести Email
+    - Ввести Password
     - Подтвердить пароль
     - Нажать кнопку "Submit"
   expected-result: |
@@ -95,6 +98,24 @@
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
 
+- summary: |
+    Неуспешная авторизация с несуществующим email
+  requirement: |
+    При правильном выполнении действий появлется сообщение об ошибке "email не найден"
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+    Email = lalala@mail.ru 
+    Password = lalala
+  steps:
+    - Нажать кнопку "Sign In"
+    - Ввести email
+    - Ввести Password
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Появляется сообщение об ошибке "email не найден"
+
 
 - summary: |
     Успешное создание игры с ботом через авторизованного пользователя
@@ -149,4 +170,25 @@
     - Нажать кнопку "Create battle"
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/games/(номер игры), начинается отсчет времени игры.
+
+
+- summary: |
+    Неуспешное создание игры по приглашению другого пользователя
+  requirement: |
+    При правильном выполнении действий появляется сообщение об ошибке
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать любой уровень
+    - Выбрать тип игры "With a friend"
+    - Установить любое количество времени игры
+    - В выпадающем меню выбрать любого пользователя
+    - Выбрать любое задание
+    - Выбрать любые теги
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Появляется сообщение об ошибке, игра не начинается. 
     
