@@ -1,0 +1,29 @@
+- summary: |
+    Успешная смена языка
+  requirement: |
+    При правильном выполнении действий язык сайта должен измениться на выбранный
+  prerequisites: |
+    Открыта страница магазина https://hexlet-products-store.vercel.app/
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - В меню с названием "Language" выбрать язык "Russian"
+  expected-result: |
+    Язык сайта должен измениться на русский
+
+
+- summary: |
+    Успешное добавление товара в корзину
+  requirement: |
+    При правильном выполнении действий товар должен добавиться в корзину
+  prerequisites: |
+    Открыта страница магазина https://hexlet-products-store.vercel.app/, выбран русский язык
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Выбираем любой товар
+    - Нажимаем на кнопку "В корзину" в карточке товара
+    - Нажимаем на кнопку "Корзина"
+  expected-result: |
+    В корзине должна появиться строка с названием товара, его количеством и ценой, а также кнопка "Оформить заказ" 
+    и кнопка "Удалить" напротив названия товара
