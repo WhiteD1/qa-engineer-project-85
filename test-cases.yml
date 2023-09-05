@@ -98,6 +98,7 @@
   expected-result: |
     Происходит переход на страницу https://codebattle.hexlet.io/#lobby, появляется сообщение "Successfully authenticated"
 
+
 - summary: |
     Неуспешная авторизация с несуществующим email
   requirement: |
@@ -115,6 +116,22 @@
     - Нажать кнопку "Submit"
   expected-result: |
     Появляется сообщение об ошибке "email не найден"
+
+
+- summary: |
+    Успешное изменение языка программирования авторизованного пользователя
+  requirement: |
+    При правильном выполнении действий меняется язык программирования пользователя
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать на никнейм или аватарку справа вверху
+    - В выпадающем меню выбрать "Settings"
+    - В меню "Your weapon" выбрать любой другой язык программирования
+  expected-result: |
+    Язык программирования пользователя успешно изменился
 
 
 - summary: |
