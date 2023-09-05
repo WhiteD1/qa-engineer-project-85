@@ -295,4 +295,51 @@
     - В выпадающем меню выбрать "Users rating"
   expected-result: |
     Должна открыться страница с рейтингом всех игроков
-    
+
+
+- summary: |
+    Проверка верстки главной страницы сайта на мобильных устройствах
+  requirement: |
+    Главная страница должна быть адаптирована к мобильным устройствам
+  prerequisites: |
+    Пользователь авторизован, открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Мобильное устройство iPhone Xs, OC- iOS 16.3
+  steps:
+    - Выбрать меню "Completed games"
+    - Выбрать меню "Lobby"
+    - Выбрать меню "Tournaments"
+  expected-result: |
+    Макет отображается корректно, текст не выходит за границы полей
+
+
+- summary: |
+    Проверка защиты данных пользователя
+  requirement: |
+    При вводе пароля в поле "Password" символы должны быть скрыты
+  prerequisites: |
+    Открыта страница сайта https://codebattle.hexlet.io 
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+  steps:
+    - Нажать кнопку "Sign in"
+    - Вводить любые символы в поле "Password"
+  expected-result: |
+    При вводе пароля символы скрыты
+
+
+- summary: |
+    Проверка поля чата на XSS
+  requirement: |
+    При выполнении указанных действий верстка страницы не должна измениться
+  prerequisites: |
+    ОПользователь авторизован, открыта страница сайта https://codebattle.hexlet.io
+  test-data: |
+    Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
+    Ключевые слова = <h1>ПРИВЕТ!</h1>
+  steps:
+    - Нажимаем на строку чата
+    - Вводим ключевые слова
+    - Нажать Enter
+  expected-result: |
+    Верстка страницы не должна измениться
