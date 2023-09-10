@@ -26,6 +26,7 @@
     При правильном выполнении действий происходит регистрация нового пользователя с помощью аккаунта на GitHub
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io/
+    Имеется аккаунт GitHub
   test-data: |
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
   steps:
@@ -42,6 +43,7 @@
     При правильном выполнении действий происходит регистрация нового пользователя с помощью аккаунта на Discord
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io/
+    Имеется аккаунт Discord
   test-data: |
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
   steps:
@@ -75,6 +77,7 @@
     При правильном выполнении действий происходит авторизация пользователя
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io/
+    Имеется аккаунт GitHub
   test-data: |
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
   steps:
@@ -90,6 +93,7 @@
     При правильном выполнении действий происходит авторизация пользователя
   prerequisites: |
     Открыта страница сайта https://codebattle.hexlet.io/
+    Имеется аккаунт Discord
   test-data: |
     Браузер Google Chrome, Mozilla FireFox, Opera, Yandex, Microsoft Edge
   steps:
@@ -130,8 +134,11 @@
     - Нажать на никнейм или аватарку справа вверху
     - В выпадающем меню выбрать "Settings"
     - В меню "Your weapon" выбрать любой другой язык программирования
+    - Нажать на никнейм или аватарку справа вверху ещё раз
+    - В выпадающем меню выбрать "My Profile"
+    - На открывшейся странице слва под никнеймом в поле "Lang:" должна измениться иконка языка программирования
   expected-result: |
-    Язык программирования пользователя успешно изменился
+    Язык программирования пользователя успешно изменился, изменилась иконка языка программирования в профиле
 
 
 - summary: |
